@@ -11,4 +11,4 @@ $ ./download_datasets.sh
 $ python main.py [-pm=] [-e=]
 ```
 - __pm:__ choice of pre-trained models from vgg11, vgg16 and vgg19, vgg11 by default
-- __e:__ Number of epoch, i.e. number of iteration of training, 100 by default
+- __e:__ Number of epoch, i.e. number of iteration of training, 10 by default
