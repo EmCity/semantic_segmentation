@@ -5,13 +5,13 @@ import argparse
 
 if __name__ == "__main__":
 	# receive arguments from keyboard
-    parser.add_argument('-e', type=int, default=10)
-    parser.add_argument('-pm', type=str, default="vgg11")
-    args = vars(parser.parse_args())
+	parser.add_argument('-e', type=int, default=10)
+	parser.add_argument('-pm', type=str, default="vgg11")
+	args = vars(parser.parse_args())
 
-    # initialize the parameters
-    epoch = args['e']
-    pre_model = args['pm']
+	# initialize the parameters
+	epoch = args['e']
+	pre_model = args['pm']
 
 	# load the data
 	train_data = SegmentationData(image_paths_file='datasets/segmentation_data/train.txt')
