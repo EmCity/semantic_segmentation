@@ -2,8 +2,10 @@ from model import *
 from data_utils import SegmentationData
 from solver import Solver
 import argparse
+import torch
 
 if __name__ == "__main__":
+	parser = argparse.ArgumentParser(description='Process some integers.')
 	# receive arguments from keyboard
 	parser.add_argument('-e', type=int, default=10)
 	parser.add_argument('-pm', type=str, default="vgg11")
@@ -15,8 +17,9 @@ if __name__ == "__main__":
 
 	# load the data
 	train_data = SegmentationData(image_paths_file='datasets/segmentation_data/train.txt')
+	#val_data = SegmentationData(image_paths_file='datasets/segmentation_data/val.txt')
 	print("Train size: %i" % len(train_data))
-	print("Validation size: %i" % len(val_data))
+	#print("Validation size: %i" % len(val_data))
 	print("Img size: ", train_data[0][0].size())
 	print("Segmentation size: ", train_data[0][1].size())
 	print()
